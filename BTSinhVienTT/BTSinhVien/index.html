@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--Lưu ý chèn js theo thứ tự main cần sử dụng danhsachsinhvien, danhsachsinhvien cần sử dụng sinhvien-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+	
+</head>
+<body>
+
+	<div class="container">
+		<h2>Thông tin sinh viên</h2>
+		<form>
+			<div class="form-group">
+				<label for="masv">Mã SV:</label>
+				<input type="text" class="form-control" id="masv" placeholder="Nhập MaSV" name="MaSV">
+			</div>
+			<div class="form-group">
+				<label for="hoten">Họ tên:</label>
+				<input type="text" class="form-control" id="hoten" placeholder="Nhập Họ tên" name="hoten">
+			</div>
+			<div class="form-group">
+				<label for="cmnd">CMND:</label>
+				<input type="text" class="form-control" id="cmnd" placeholder="Nhập CMND" name="cmnd">
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" placeholder="Nhập Email" name="email">
+			</div>
+			<div class="form-group">
+				<label for="sdt">Điện thoại:</label>
+				<input type="number" class="form-control" id="sdt" placeholder="Nhập SDT" name="sdt">
+			</div> 
+			<button type="button" class="btn btn-success" onclick="ThemSinhVien()">Thêm sinh viên</button>
+		</form>
+		
+		
+	<h2>Danh sách sinh viên</h2>
+  <div style="float: right;">
+  		<button class="btn btn-success" type="button" onclick="LuuDuLieu()">Lưu dữ liệu</button>
+  		<button class="btn btn-primary" type="button" onclick="LayDuLieu()">Lấy dữ liệu</button>
+  		<button class="btn btn-danger" type="button" onclick="XoaSinhVien()">Xóa Sinh Viên</button>
+  </div>
+  <div class="clearfix"></div>
+  <br />
+   <div >
+    <div class="input-group">
+      <input type="text" class="form-control" onkeyup="TimKiemSinhVien()" id="TuKhoa" placeholder="Nhập vào họ tên">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" onclick="TimKiemSinhVien()" type="button">Tìm kiếm</button>
+      </span>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+      	<th></th>
+        <th>Mã SV</th>
+        <th>Họ Tên</th>
+        <th>Email</th>
+        <th>Số ĐT</th>
+        <th>CMND</th>
+      </tr>
+    </thead>
+    <tbody id="tblSinhVien">
+  
+      
+    </tbody>
+  </table>
+
+
+	</div>
+	<div id="divBg">
+		
+	</div>
+	<script type="text/javascript" src="bundle.js"></script>
+</body>
+</html>
